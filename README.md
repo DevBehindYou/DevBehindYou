@@ -2,12 +2,6 @@
  
 - Welcome to my GitHub profile! I'm a passionate developer with interests in Android & iOS app development and AI.
  
-## 👀 I’m interested in
-- Android App Development
-- iOS App Development
-- Artificial Intelligence and Machine Learning
-- Open Source Projects
-
 ## 🌱 I’m currently learning
 - Building beautiful and responsive apps with Flutter
 - Exploring data analysis and machine learning using Python
