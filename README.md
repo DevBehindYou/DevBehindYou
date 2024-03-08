@@ -12,7 +12,7 @@
 - Data science projects for real-world problem-solving
 - Web development initiatives, especially those with a creative twist
 
-![ezgif-5-00d4ee97a4](https://github.com/DevBehindYou/DevBehindYou/assets/147663456/7dad65f4-4bad-4dc0-97f3-bf8cfeb55c02)
+![ezgif-5-591fad4ec1](https://github.com/DevBehindYou/DevBehindYou/assets/147663456/c53fbf95-efa8-4170-912d-dbbe7bb254c1)
 
 ## 📫 How to reach me
 - Email: DevBehindYou@gmail.com
