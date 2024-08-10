@@ -13,5 +13,5 @@
 - Web development initiatives, especially those with a creative twist
 
 ## 📫 How to reach me
-- Email: DevBehindYou@gmail.com
+- Email: devbehindyou@gmail.com
 - Feel free to connect with me! Whether you want to chat about Flutter, data analysis, web development, or anything else tech-related, I’m happy to help and always up for a conversation.
