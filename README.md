@@ -1,17 +1,30 @@
-- 👋 Hi, I’m @DevBehindYou
- 
-- Welcome to my GitHub profile! I'm a dedicated Android & iOS app developer with expertise in Flutter and a growing interest in data analysis.
- 
-## 🌱 I’m currently learning
-- Building beautiful and responsive apps with Flutter
-- Exploring data analysis and machine learning using Python
-- Crafting web experiences with HTML, CSS, and JavaScript
- 
-## 💞️ I’m looking to collaborate on
-- Flutter projects for mobile app development
-- Data science projects for real-world problem-solving
-- Web development initiatives, especially those with a creative twist
+# 👋 Hey there, I'm DevBehindYou
 
-## 📫 How to reach me
-- Email: devbehindyou@gmail.com
-- Feel free to connect with me! Whether you want to chat about Flutter, data analysis, web development, or anything else tech-related, I’m happy to help and always up for a conversation.
+I build things with **Flutter**, explore patterns in **data**, and break the internet (sometimes) with **web experiments**.
+
+---
+
+## 🚧 What I'm Learning Right Now
+
+- Building polished mobile UIs with **Flutter**
+- Playing with data and models in **Python**
+- Bringing ideas to life using **HTML, CSS, JS**
+
+---
+
+## 🤝 Let’s Work Together If You’re Into
+
+- Flutter-based mobile apps that don’t look like clones  
+- Real-world **data projects** that ask better questions  
+- Web ideas with just the right amount of weird
+
+---
+
+## 📫 You Can Reach Me At
+
+- 📧 **devbehindyou@gmail.com**  
+- Or just drop a message if you're into Flutter, data, or just want to geek out
+
+---
+
+> *Code is better when shared. Let's build something cool together.*
