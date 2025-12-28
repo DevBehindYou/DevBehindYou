@@ -29,8 +29,8 @@ I'm always open to collaborating on projects that require a mix of technical pre
 
 * 📧 **Email:** [devbehindyou@gmail.com](mailto:devbehindyou@gmail.com)
 * 🐦 **Twitter/X:** [@DevBehindYou](https://x.com/devbehindyou)
-* 💼 **LinkedIn:** [linkedin.com/in/yourprofile](https://www.linkedin.com/in/ashutoshsept20/)
-* 📝 **Medium:** [medium.com/@devbehindyou](https://medium.com/@devbehindyou/)
+* 💼 **LinkedIn:** [@ashutoshsept20](https://www.linkedin.com/in/ashutoshsept20/)
+* 📝 **Medium:** [@DevBehindYou](https://medium.com/@devbehindyou/)
 
 *"The old saying 'if you build it, they will come' is no longer true. I build it, and I make sure they arrive."*
 
