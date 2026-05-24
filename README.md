@@ -8,7 +8,8 @@ At the intersection of **Technical Execution** and **Strategic Growth**, I bridg
 | **Development** | **SEO Engine** | **Data Driven** |
 | :--- | :--- | :--- |
 | Performance-First. Architecting high-speed, scalable web applications with technical SEO baked into the first line of code. | I engineer visibility. Moving beyond keywords to align technical structure with user intent and algorithms. | Insight-Led. I don't guess; I measure. Using analytics to validate what works and optimize for measurable business outcomes. |
-![68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6a732c74732c68746d6c2c6373732c7675652c6b6f746c696e2c616e64726f696473747564696f](https://github.com/user-attachments/assets/499b3bcf-5536-42aa-89e1-ac0d8fedd701) | <img width="964" height="137" alt="Frame 1" src="https://github.com/user-attachments/assets/b29f9ecb-cdeb-4c3b-a95c-4589b9379288" />
+![68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6a732c74732c68746d6c2c6373732c7675652c6b6f746c696e2c616e64726f696473747564696f](https://github.com/user-attachments/assets/499b3bcf-5536-42aa-89e1-ac0d8fedd701) | <img width="964" height="137" alt="Frame 1" src="https://github.com/user-attachments/assets/e8f2017f-40ce-43c1-b5ea-74bd3ba33c17" />
+
 
 ---
 ### 🛠 My Tech Stack
