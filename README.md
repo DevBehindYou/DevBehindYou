@@ -8,7 +8,8 @@ At the intersection of **Technical Execution** and **Strategic Growth**, I bridg
 | **Development** | **SEO Engine** | **Data Driven** |
 | :--- | :--- | :--- |
 | Performance-First. Architecting high-speed, scalable web applications with technical SEO baked into the first line of code. | I engineer visibility. Moving beyond keywords to align technical structure with user intent and algorithms. | Insight-Led. I don't guess; I measure. Using analytics to validate what works and optimize for measurable business outcomes. |
-![68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6a732c74732c68746d6c2c6373732c7675652c6b6f746c696e2c616e64726f696473747564696f](https://github.com/user-attachments/assets/499b3bcf-5536-42aa-89e1-ac0d8fedd701) | <img width="964" height="137" alt="Frame 1" src="https://github.com/user-attachments/assets/0934a030-e7b8-45d0-98f2-7631e67df654" />
+![68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d6a732c74732c68746d6c2c6373732c7675652c6b6f746c696e2c616e64726f696473747564696f](https://github.com/user-attachments/assets/499b3bcf-5536-42aa-89e1-ac0d8fedd701) | <img width="964" height="137" alt="Frame 1" src="https://github.com/user-attachments/assets/0934a030-e7b8-45d0-98f2-7631e67df654" /> | <img width="964" height="137" alt="Frame 2" src="https://github.com/user-attachments/assets/f4b83c63-03ea-4598-95aa-27db862bdae3" />
+
 
 
 
