@@ -28,6 +28,27 @@ At the intersection of **Technical Execution** and **Strategic Growth**, I bridg
 ![68747470733a2f2f6768666173742e746f702f7261772e67697468756275736572636f6e74656e742e636f6d2f537570657231323133382f537570657231323133382f6f75747075742f6769746875622d636f6e747269627574696f6e2d677269642d736e616b652d6461726b2e737667](https://github.com/user-attachments/assets/663c115c-1ec3-42a9-980a-d78a65a8ed70)
 
 ---
+### 💡 Interactive Insights (Click to Expand)
+
+<details>
+  <summary><b>🕵️‍♂️ What exactly is "Programmatic SEO"?</b></summary>
+  <br>
+  It’s the science of scaling search visibility! Instead of writing one article at a time, I build scalable web architectures and use structured data to generate thousands of highly targeted, intent-driven landing pages dynamically.
+</details>
+
+<details>
+  <summary><b>⚡ Why Next.js over traditional CMS?</b></summary>
+  <br>
+  Speed and control. Core Web Vitals are a direct ranking factor for Google. Next.js provides unmatched server-side rendering (SSR) and static site generation (SSG) capabilities, giving websites the millisecond load times they need to dominate search results.
+</details>
+
+<details>
+  <summary><b>🛠️ Do you take freelance projects?</b></summary>
+  <br>
+  Yes! I selectively take on projects that need a blend of high-end web development and aggressive SEO architecture. You can reach out to me via the links below.
+</details>
+
+---
 ### 🤝 Let's Connect & Build Together
 I'm always open to collaborating on projects that require a mix of technical precision and strategic growth.
 
