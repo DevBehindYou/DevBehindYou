@@ -51,6 +51,9 @@ At the intersection of **Technical Execution** and **Strategic Growth**, I bridg
 </details>
 
 ---
+<br>
+<a href="https://devbehindyou.com"><img src="./og-card-2-editorial-digest.png" alt="Editorial Digest Layout" width="100%" /></a>
+
 ### 🤝 Let's Connect & Build Together
 I'm always open to collaborating on projects that require a mix of technical precision and strategic growth.
 
@@ -61,7 +64,6 @@ I'm always open to collaborating on projects that require a mix of technical pre
 
 *"The old saying 'if you build it, they will come' is no longer true. I build it, and I make sure they arrive."*
 
-<br>
-<a href="https://devbehindyou.com"><img src="./og-card-2-editorial-digest.png" alt="Editorial Digest Layout" width="100%" /></a>
+
 
 
