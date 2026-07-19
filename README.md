@@ -12,7 +12,7 @@ At the intersection of **Technical Execution** and **Strategic Growth**, I bridg
 
 
 <br>
-<a href="https://devbehindyou.com"><img src="./og-card-1-split-masthead.png" alt="Featured Architecture" width="100%" /></a>
+<a href="https://devbehindyou-app-github.netlify.app/"><img src="./og-card-1-split-masthead.png" alt="Featured Architecture" width="100%" /></a>
 <br>
 
 ---
@@ -52,7 +52,7 @@ At the intersection of **Technical Execution** and **Strategic Growth**, I bridg
 
 ---
 <br>
-<a href="https://devbehindyou.com"><img src="./og-card-2-editorial-digest.png" alt="Editorial Digest Layout" width="100%" /></a>
+<a href="https://devbehindyou.vercel.app"><img src="./og-card-2-editorial-digest.png" alt="Editorial Digest Layout" width="100%" /></a>
 
 ### 🤝 Let's Connect & Build Together
 I'm always open to collaborating on projects that require a mix of technical precision and strategic growth.
@@ -61,6 +61,7 @@ I'm always open to collaborating on projects that require a mix of technical pre
 * 🐦 **Twitter/X:** [@DevBehindYou](https://x.com/devbehindyou)
 * 💼 **LinkedIn:** [@DevBehindYou](https://www.linkedin.com/in/devbehindyou/)
 * 📝 **Medium:** [@DevBehindYou](https://medium.com/@devbehindyou/)
+* 💬 **Got a project in mind?:** [@DevBehindYou](https://devbehindyou-app-github.netlify.app/)
 
 *"The old saying 'if you build it, they will come' is no longer true. I build it, and I make sure they arrive."*
 
