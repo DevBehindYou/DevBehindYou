@@ -1,0 +1,30 @@
+# DevBehindYou — https://devbehindyou.github.io/analyst_web/
+# Everything on this site is meant to be read, indexed and quoted.
+
+User-agent: *
+Allow: /
+
+# AI answer engines are explicitly welcome. Being cited in an AI answer is
+# the point of the GEO work on this page, so no crawler here is blocked.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://devbehindyou.github.io/analyst_web/sitemap.xml

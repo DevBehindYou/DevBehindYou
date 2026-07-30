@@ -1,0 +1,15 @@
+{
+  "name": "Ashutosh Sharma — DevBehindYou",
+  "short_name": "DevBehindYou",
+  "description": "Developer at heart. SEO/GEO specialist by mind. Data analyst by habit.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c0d10",
+  "theme_color": "#0c0d10",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
