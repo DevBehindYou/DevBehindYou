@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # DevBehindYou — https://devbehindyou.github.io/DevBehindYou/
+=======
+# DevBehindYou — https://devbehindyou.github.io/devbehindyou/
+>>>>>>> 0b9ef0c4235726493306b5aa59932f6ba368ff87
 # Everything on this site is meant to be read, indexed and quoted.
 
 User-agent: *
