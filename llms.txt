@@ -7,7 +7,7 @@
 > specialist by mind, analyst by habit. Signature line: *"I engineer
 > visibility."*
 
-Canonical page: https://devbehindyou.github.io/analyst_web/
+Canonical page: https://devbehindyou.github.io/DevBehindYou/
 Full portfolio: https://devbehindyou.vercel.app/
 Start a project request: https://devbehindyou-app-github.netlify.app/
 Contact: devbehindyou@gmail.com

@@ -1,4 +1,4 @@
-# DevBehindYou — https://devbehindyou.github.io/analyst_web/
+# DevBehindYou — https://devbehindyou.github.io/DevBehindYou/
 # Everything on this site is meant to be read, indexed and quoted.
 
 User-agent: *
@@ -27,4 +27,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://devbehindyou.github.io/analyst_web/sitemap.xml
+Sitemap: https://devbehindyou.github.io/DevBehindYou/sitemap.xml
