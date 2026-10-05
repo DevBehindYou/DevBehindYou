@@ -7,9 +7,9 @@
 <meta name="color-scheme" content="dark">
 
 <!-- ==========================================================================
-     CANONICAL DOMAIN — change in exactly four places if you move the site:
-     1. <link rel="canonical">   2. og:url   3. JSON-LD @id / url values
-     4. sitemap.xml
+     CANONICAL DOMAIN: if the site moves, change every place listed in README.md
+     under "Moving to a custom domain" (this file, sitemap.xml, robots.txt, llms.txt,
+     privacy.html, 404.html and scripts/site-audit.mjs).
      Currently set to the GitHub Pages URL for DevBehindYou/DevBehindYou.
      ========================================================================== -->
 
@@ -49,10 +49,10 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 
-<!-- Fonts. Only the weights actually used; swap so text paints immediately. -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+<!-- Fonts are self-hosted (assets/fonts, OFL 1.1): no request to Google before consent,
+     no render-blocking third-party stylesheet. Preload the two the first screen paints. -->
+<link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 <link rel="stylesheet" href="assets/css/style.css">
 
@@ -62,15 +62,11 @@
   document.documentElement.classList.add('js');
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RY0471FCXN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RY0471FCXN');
-</script>
+<!-- Google Analytics 4 (G-RY0471FCXN) loads from assets/js/consent.js, and only after the
+     visitor allows analytics. Search Console verification uses the meta tag below, because the
+     GA verification method needs the tag in the head on every load. -->
+<!-- <meta name="google-site-verification" content="PASTE-TOKEN-FROM-SEARCH-CONSOLE"> -->
+<script src="assets/js/consent.js" defer></script>
 
 <!-- ==========================================================================
      STRUCTURED DATA
@@ -161,7 +157,6 @@
         "Programmatic SEO",
         "Core Web Vitals",
         "Schema Markup",
-        "Web Development",
         "React",
         "Next.js",
         "Flutter",
@@ -180,8 +175,7 @@
         "SEMrush",
         "Ahrefs",
         "Tableau",
-        "Power BI",
-        "Entity SEO"
+        "Power BI"
       ],
       "mainEntityOfPage": { "@id": "https://devbehindyou.github.io/DevBehindYou/#webpage" },
       "workLocation": { "@type": "Place", "name": "Remote, async across US, EU and APAC" },
@@ -189,7 +183,10 @@
         { "@type": "Organization", "name": "NinePages" },
         { "@type": "Organization", "name": "TheFirstRanker" }
       ],
-      "alumniOf": { "@type": "Organization", "name": "Content Whale" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "KP Engineering College, Agra" },
+        { "@type": "EducationalOrganization", "name": "PMV Polytechnic" }
+      ],
       "hasOccupation": [
         {
           "@type": "Occupation",
@@ -214,9 +211,9 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data Analytics & Reporting", "serviceType": "GA4, Search Console and BigQuery reporting" } },
         {
           "@type": "Offer",
+          "url": "https://devbehindyou.com/portfolio/products",
           "itemOffered": { "@type": "Product", "name": "Website and web app templates", "description": "14 personally built website and web app templates sold as source code, with optional add-ons for curated content, CRM integration, AI chatbot integration and SEO audit." },
-          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 89, "maxPrice": 120, "priceCurrency": "USD" },
-          "url": "https://devbehindyou.vercel.app/portfolio/products"
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 89, "maxPrice": 120, "priceCurrency": "USD" }
         }
       ],
       "sameAs": [
@@ -225,8 +222,8 @@
         "https://medium.com/@devbehindyou",
         "https://x.com/devbehindyou",
         "https://youtube.com/@devbehindyou",
-        "https://devbehindyou.vercel.app/",
-        "https://content-whale.com/us/blog/author/ashutosh/"
+        "https://devbehindyou.com/",
+        "https://content-whale.com/blog/author/ashutosh/"
       ]
     },
     {
@@ -252,9 +249,10 @@
           "position": 2,
           "item": {
             "@type": "WebApplication",
-            "name": "The Hope Tarot",
+            "name": "NEXUS CRM",
+            "url": "https://nexus-crm-alpha-weld.vercel.app/",
             "applicationCategory": "BusinessApplication",
-            "description": "Full-stack Next.js site for a spiritual consultancy, with a chat widget and a custom admin CRM for bookings and client records.",
+            "description": "Multi-tenant CRM with a drag-and-drop deal pipeline, lead scoring, quotes and forecasts, and an AI copilot that answers pipeline questions from live data.",
             "creator": { "@id": "https://devbehindyou.github.io/DevBehindYou/#person" }
           }
         },
@@ -274,20 +272,20 @@
     {
       "@type": "ItemList",
       "@id": "https://devbehindyou.github.io/DevBehindYou/#projects",
-      "name": "Open-source projects by DevBehindYou",
-      "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 4,
+      "name": "Projects by DevBehindYou",
+      "description": "The five flagship projects from the resume of Ashutosh Sharma, with live demos and public code where available.",
+      "numberOfItems": 5,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@type": "SoftwareSourceCode",
-            "name": "MDify",
-            "description": "Free, open-source web app that converts documents into clean Markdown using Microsoft's MarkItDown library, cutting the token overhead of feeding raw files into AI tools.",
-            "programmingLanguage": "JavaScript",
-            "codeRepository": "https://github.com/DevBehindYou/MDify",
-            "author": { "@id": "https://devbehindyou.github.io/DevBehindYou/#person" }
+            "@type": "WebApplication",
+            "name": "NEXUS CRM",
+            "url": "https://nexus-crm-alpha-weld.vercel.app/",
+            "applicationCategory": "BusinessApplication",
+            "description": "Multi-tenant CRM with contacts, accounts, leads and deals, a drag-and-drop pipeline, quotes and forecasts, and an AI copilot that answers pipeline questions from live data.",
+            "creator": { "@id": "https://devbehindyou.github.io/DevBehindYou/#person" }
           }
         },
         {
@@ -295,10 +293,11 @@
           "position": 2,
           "item": {
             "@type": "SoftwareSourceCode",
-            "name": "Atomic-Notes",
-            "description": "A note-taking application built to prioritise security and convenience.",
-            "programmingLanguage": "Dart",
-            "codeRepository": "https://github.com/DevBehindYou/Atomic-Notes",
+            "name": "EKIP: Enterprise Knowledge Intelligence Platform",
+            "url": "https://ekip-project.vercel.app/",
+            "codeRepository": "https://github.com/DevBehindYou/Enterprise-Knowledge-Intelligence-Platform-EKIP-Project",
+            "programmingLanguage": "JavaScript",
+            "description": "Retrieval-augmented assistant that answers employee questions from company documents, with a source citation and confidence score on every answer.",
             "author": { "@id": "https://devbehindyou.github.io/DevBehindYou/#person" }
           }
         },
@@ -307,9 +306,11 @@
           "position": 3,
           "item": {
             "@type": "SoftwareSourceCode",
-            "name": "timoglobe",
-            "description": "A world-time app showing the current time across countries.",
-            "codeRepository": "https://github.com/DevBehindYou/timoglobe",
+            "name": "ITAP: Intelligent Talent Acquisition Platform",
+            "url": "https://itap-project.vercel.app/",
+            "codeRepository": "https://github.com/DevBehindYou/Intelligent-Talent-Acquisition-Platform-ITAP-Project",
+            "programmingLanguage": ["JavaScript", "Python"],
+            "description": "Multi-tenant hiring platform with a real-time candidate pipeline, resume parsing and explainable match scores with adjustable weights.",
             "author": { "@id": "https://devbehindyou.github.io/DevBehindYou/#person" }
           }
         },
@@ -318,10 +319,25 @@
           "position": 4,
           "item": {
             "@type": "SoftwareSourceCode",
-            "name": "demo_apps_builds",
-            "description": "An e-commerce application with Firebase integration.",
+            "name": "MDify",
+            "url": "https://mdify-app.vercel.app/",
+            "codeRepository": "https://github.com/DevBehindYou/MDify",
+            "programmingLanguage": ["JavaScript", "Python"],
+            "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+            "description": "Free, no-sign-up converter from PDF, Office, EPUB, image and ZIP files to clean Markdown, cutting PDF token costs in AI chat by about 70%.",
+            "author": { "@id": "https://devbehindyou.github.io/DevBehindYou/#person" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Atomic Notes",
+            "url": "https://atomic-notes-community.vercel.app/",
+            "codeRepository": "https://github.com/DevBehindYou/Atomic-Notes-App-V0.2",
             "programmingLanguage": "Dart",
-            "codeRepository": "https://github.com/DevBehindYou/demo_apps_builds",
+            "description": "Local-first Android notes app that syncs one file per note to the user's own Google Drive, with an optional end-to-end encrypted vault. Source-available.",
             "author": { "@id": "https://devbehindyou.github.io/DevBehindYou/#person" }
           }
         }
@@ -345,7 +361,7 @@
           "name": "What kind of web development do you take on?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Full-stack web apps and marketing sites. React and Next.js with Node.js behind them, MongoDB, Supabase or Firebase for data, Flutter for apps, WordPress when a client’s team maintains the site. Most common jobs: a marketing site that has to rank, an internal CRM or dashboard, and migrations off legacy WordPress. Recent work: datastride.ai, plus two full-stack Next.js products with custom admin panels."
+            "text": "Full-stack web apps and marketing sites. React and Next.js with Node.js behind them, MongoDB, Supabase or Firebase for data, Flutter for apps, WordPress when a client’s team maintains the site. Most common jobs: a marketing site that has to rank, an internal CRM or dashboard, and migrations off legacy WordPress. Recent work: datastride.ai, the Raku-Chan fan site and NEXUS CRM, a multi-tenant CRM with an AI copilot."
           }
         },
         {
@@ -417,7 +433,7 @@
           "name": "Where can I find DevBehindYou online?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The DevBehindYou GitHub at github.com/DevBehindYou holds 25+ public repositories, including MDify, Atomic-Notes and timoglobe. The full DevBehindYou portfolio, with case studies and 14 templates, is at devbehindyou.vercel.app. Writing goes to Medium at @devbehindyou, and the same handle covers LinkedIn, X and YouTube."
+            "text": "The DevBehindYou GitHub at github.com/DevBehindYou holds 25+ public repositories, including MDify, EKIP, ITAP and Atomic Notes. The full DevBehindYou portfolio, with case studies and results, is at devbehindyou.com. Writing goes to Medium at @devbehindyou, and the same handle covers LinkedIn, X and YouTube."
           }
         }
       ]
@@ -490,7 +506,7 @@
 <!-- ============================ NAV ============================ -->
 <header class="nav" id="nav">
   <nav class="container nav-inner" aria-label="Primary">
-    <a class="wordmark" href="#hero" aria-label="DevBehindYou — back to top">
+    <a class="wordmark" href="#hero" aria-label="DevBehindYou, back to top">
       <svg aria-hidden="true"><use href="#i-arrow"/></svg>DevBehindYou
     </a>
 
@@ -522,9 +538,9 @@
   <a href="#builds">Shipped builds</a>
   <a href="#geo">What GEO is</a>
   <a href="#proof">Proof of work</a>
-  <a href="#work">Open source</a>
+  <a href="#work">Projects</a>
   <a href="#faq">FAQ</a>
-  <a class="btn btn-ghost" href="https://devbehindyou.vercel.app/" target="_blank" rel="noopener me" data-goal="portfolio-nav">
+  <a class="btn btn-ghost" href="https://devbehindyou.com/" target="_blank" rel="noopener me" data-goal="portfolio-nav">
     Full portfolio<svg aria-hidden="true"><use href="#i-arrow"/></svg>
   </a>
   <a class="btn btn-primary" href="https://devbehindyou-app-github.netlify.app/" target="_blank" rel="noopener" data-goal="request-nav">
@@ -567,7 +583,7 @@
       </p>
 
       <div class="btn-row" style="margin-top:1.75rem">
-        <a class="btn btn-primary" href="https://devbehindyou.vercel.app/" target="_blank" rel="noopener me" data-goal="portfolio-hero">
+        <a class="btn btn-primary" href="https://devbehindyou.com/" target="_blank" rel="noopener me" data-goal="portfolio-hero">
           See the full portfolio<svg aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
         <a class="btn btn-ghost" href="https://devbehindyou-app-github.netlify.app/" target="_blank" rel="noopener" data-goal="request-hero">
@@ -602,7 +618,8 @@
         </div>
 
         <div class="console-body">
-          <ol class="console-out" id="console-out" role="log" aria-live="polite" aria-label="Console output">
+          <div class="console-log" role="log" aria-live="polite" aria-label="Console output">
+          <ol class="console-out" id="console-out">
             <li class="ln-cmd"><span class="ln-p">$</span>whoami</li>
             <li class="ln-kv"><span>name</span><b>Ashutosh Sharma</b></li>
             <li class="ln-kv"><span>online as</span><b>DevBehindYou</b></li>
@@ -612,6 +629,7 @@
             <li class="ln-kv"><span>status</span><b class="ok">Open to work</b></li>
             <li class="ln-hint">Type <code>help</code> for commands. Or <code>portfolio</code> to jump straight to the work.</li>
           </ol>
+          </div>
 
           <form class="console-form" id="console-form" autocomplete="off">
             <label class="visually-hidden" for="console-input">Type a console command</label>
@@ -674,12 +692,12 @@
       <ul class="timeline">
         <li><span class="t-when">NOW</span><span><span class="t-role">Web Developer &amp; SEO Specialist &middot; NinePages</span><span class="t-desc">Full-stack builds with the search side handled in the same seat. React and Next.js up front, Node.js behind.</span></span></li>
         <li><span class="t-when">FEB 2026</span><span><span class="t-role">Growth Specialist &middot; TheFirstRanker</span><span class="t-desc">Part-time, remote. Strategy, competitor research and site audits, plus the build work to act on them.</span></span></li>
-        <li><span class="t-when">PRIOR</span><span><span class="t-role">SEO Specialist &amp; AI-SEO Content Writer, then Growth Team Manager &middot; Content Whale</span><span class="t-desc">350+ posts in 3 months, then promoted to run the pipeline.</span></span></li>
+        <li><span class="t-when">2024&ndash;2025</span><span><span class="t-role">SEO Specialist &amp; AI-SEO Content Writer, then Growth Team Manager &middot; Content Whale</span><span class="t-desc">300+ blogs shipped in a single month and 800+ pieces overall, then promoted to run the growth team.</span></span></li>
         <li><span class="t-when">ONGOING</span><span><span class="t-role">Freelance &middot; web, app, search and brand</span><span class="t-desc">Web and app development, SEO/GEO strategy, brand building, AI-SEO content, 14 templates sold as source code.</span></span></li>
       </ul>
 
       <p class="btn-row" style="margin-top:2rem">
-        <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/about" target="_blank" rel="noopener me" data-goal="portfolio-about">
+        <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/about" target="_blank" rel="noopener me" data-goal="portfolio-about">
           The longer version<svg aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
       </p>
@@ -739,7 +757,7 @@
             <p class="panel-badge">12+ builds shipped</p>
             <h3>Built to load fast and index clean.</h3>
             <p class="body-copy">Full-stack builds where SEO structure is a build decision, not a later pass. Client sites, internal CRMs, admin panels, migrations off legacy WordPress. This page is the demonstration: plain HTML, CSS and JS, no build step.</p>
-            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/what-i-do/web-development" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/what-i-do/web-development" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <ul class="panel-list">
             <li>React and Next.js front ends, Node.js behind them</li>
@@ -754,7 +772,7 @@
             <p class="panel-badge">DevBehindYou SEO &middot; 150+ strategies</p>
             <h3>Rank in search. Get cited by AI.</h3>
             <p class="body-copy">Technical SEO and GEO as one discipline, run next to the code. I read the crawl logs, fix the render-blocking code myself, and confirm it in Search Console. Most SEO reports list problems. Mine arrive with the commits that solved them.</p>
-            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/what-i-do/seo-geo" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/what-i-do/seo-geo" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <ul class="panel-list">
             <li>Crawlability, indexation, schema and site architecture</li>
@@ -769,7 +787,7 @@
             <p class="panel-badge">2,500+ pieces shipped</p>
             <h3>Written to rank, and to be quoted.</h3>
             <p class="body-copy">Content structured so a search engine ranks it and an answer engine can quote it. Cleanup counts too: for Ohh My Brand, 60 scraped posts came out before a single new one went in.</p>
-            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/what-i-do/ai-seo-content" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/what-i-do/ai-seo-content" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <ul class="panel-list">
             <li>Blog content, landing copy, product and technical docs</li>
@@ -783,7 +801,7 @@
             <p class="panel-badge">I don&rsquo;t guess, I measure</p>
             <h3>The layer that turns activity into proof.</h3>
             <p class="body-copy">Reporting built around decisions instead of raw numbers. Each metric arrives paired with what it should change: which page to fix, which template is losing you conversions.</p>
-            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/what-i-do/data-analytics" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/what-i-do/data-analytics" target="_blank" rel="noopener me" data-goal="portfolio-service">Full service page<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <ul class="panel-list">
             <li>GA4 and Search Console setup, tracking and reporting</li>
@@ -871,14 +889,15 @@
       </article>
 
       <article class="card" data-glow>
-        <span class="tag">FULL STACK &middot; NEXT.JS</span>
-        <h3>The Hope Tarot</h3>
-        <p>Bookings, conversation and client records in one place. Next.js front to back, a chat widget for first contact, and a custom admin panel so the owner runs it without paying for a CRM.</p>
+        <span class="tag">OWN PRODUCT &middot; NEXT.JS + NODE.JS</span>
+        <h3>NEXUS CRM</h3>
+        <p>A multi-tenant CRM I built and run as a live demo. Deals move on a drag-and-drop pipeline, leads get scored, and an AI copilot answers pipeline questions from the live data.</p>
         <ul class="mini-list">
-          <li>Full-stack Next.js build</li>
-          <li>Custom CRM panel for clients and bookings</li>
-          <li>Chat widget wired into the same data layer</li>
+          <li>Next.js front end, Node.js and Express API</li>
+          <li>AI copilot on each organisation&rsquo;s own LLM provider</li>
+          <li>Provider keys encrypted with AES-256-GCM</li>
         </ul>
+        <a class="card-link" href="https://nexus-crm-alpha-weld.vercel.app/" target="_blank" rel="noopener" data-goal="build-nexus">Live demo<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </article>
 
       <article class="card" data-glow>
@@ -900,10 +919,10 @@
     </p>
 
     <p class="btn-row" data-reveal style="margin-top:1.25rem">
-      <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/portfolio/projects" target="_blank" rel="noopener me" data-goal="portfolio-builds">
+      <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/portfolio/projects" target="_blank" rel="noopener me" data-goal="portfolio-builds">
         Every project<svg aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
-      <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/portfolio/products" target="_blank" rel="noopener me" data-goal="portfolio-templates">
+      <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/portfolio/products" target="_blank" rel="noopener me" data-goal="portfolio-templates">
         14 templates, source included<svg aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
     </p>
@@ -912,17 +931,20 @@
 
 <div class="rule"></div>
 
-<!-- ========================= FEATURED WORK ========================= -->
+<!-- ========================= PROJECTS =========================
+     The five flagship projects, in resume order. Not all are open source:
+     NEXUS CRM has no public code, Atomic Notes is source-available.
+     ================================================================= -->
 <section class="section" id="work" aria-labelledby="work-title">
   <div class="container">
     <div class="section-head head-row" data-reveal>
       <div>
-        <p class="eyebrow">DevBehindYou on GitHub</p>
-        <h2 class="section-title" id="work-title">From the commit log.</h2>
-        <p class="lead">Four projects from the DevBehindYou GitHub, where 25+ repositories are public.</p>
+        <p class="eyebrow">Projects</p>
+        <h2 class="section-title" id="work-title">Five projects, live and in code.</h2>
+        <p class="lead">The same five that lead my resume. Four have public code on the DevBehindYou GitHub, where 25+ repositories are public.</p>
       </div>
       <p class="btn-row">
-        <a class="btn btn-ghost btn-sm" href="https://devbehindyou.vercel.app/portfolio/projects" rel="noopener me" target="_blank" data-goal="portfolio-projects">
+        <a class="btn btn-ghost btn-sm" href="https://devbehindyou.com/portfolio/projects" rel="noopener me" target="_blank" data-goal="portfolio-projects">
           All projects<svg aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
         <a class="btn btn-ghost btn-sm" href="https://github.com/DevBehindYou" rel="noopener me" target="_blank">
@@ -931,56 +953,70 @@
       </p>
     </div>
 
-    <!-- The four entries are real static HTML. JS layers a draggable stack on
+    <!-- The entries are real static HTML. JS layers a draggable stack on
          top with transforms; with scripts off they render as a plain grid,
          so crawlers and screen readers get the full content either way. -->
     <div class="work-stage is-static" id="work-stage">
       <div class="work-drag" id="work-drag" aria-hidden="true"></div>
 
       <article class="work-card">
-        <p class="w-head"><span>01</span><span class="amber">JAVASCRIPT</span></p>
+        <p class="w-head"><span>01</span><span class="amber">NEXT.JS &middot; NODE.JS</span></p>
+        <h3>NEXUS CRM</h3>
+        <p>Contacts, accounts and deals on a drag-and-drop pipeline, with lead scoring, quotes and forecasts. The AI copilot answers pipeline questions from live data through each organisation&rsquo;s own LLM.</p>
+        <div class="w-foot">
+          <span class="tag">CRM</span><span class="tag">AI copilot</span>
+          <a class="repo-link" href="https://nexus-crm-alpha-weld.vercel.app/" target="_blank" rel="noopener" data-goal="project-nexus-crm-live">LIVE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <p class="w-head"><span>02</span><span class="amber">REACT &middot; NODE.JS &middot; RAG</span></p>
+        <h3>EKIP</h3>
+        <p>Answers employee questions from company documents, with a source citation and a confidence score on every answer. Scanned PDFs go through OCR on a job queue. 130+ tests.</p>
+        <div class="w-foot">
+          <span class="tag">RAG</span><span class="tag">Vector search</span>
+          <a class="repo-link" href="https://ekip-project.vercel.app/" target="_blank" rel="noopener" data-goal="project-ekip-live">LIVE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="repo-link" href="https://github.com/DevBehindYou/Enterprise-Knowledge-Intelligence-Platform-EKIP-Project" target="_blank" rel="noopener">CODE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <p class="w-head"><span>03</span><span class="amber">REACT &middot; FASTAPI</span></p>
+        <h3>ITAP</h3>
+        <p>Hiring platform with role-based access, a real-time candidate pipeline, resume parsing and match scores you can explain and reweight.</p>
+        <div class="w-foot">
+          <span class="tag">Hiring</span><span class="tag">Real time</span>
+          <a class="repo-link" href="https://itap-project.vercel.app/" target="_blank" rel="noopener" data-goal="project-itap-live">LIVE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="repo-link" href="https://github.com/DevBehindYou/Intelligent-Talent-Acquisition-Platform-ITAP-Project" target="_blank" rel="noopener">CODE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <p class="w-head"><span>04</span><span class="amber">NEXT.JS &middot; PYTHON</span></p>
         <h3>MDify</h3>
-        <p>Open-source web app that converts documents into clean Markdown using Microsoft&rsquo;s MarkItDown library. Built after a $50 afternoon API bill showed me what token overhead raw files were costing.</p>
+        <p>Free converter that turns PDF, Office, EPUB and ZIP files into clean Markdown, cutting PDF token costs in AI chat by about 70%. Built after a $50 API bill. Open source, GPL-3.0.</p>
         <div class="w-foot">
           <span class="tag">MarkItDown</span><span class="tag">AI tooling</span>
-          <a class="repo-link" href="https://github.com/DevBehindYou/MDify" target="_blank" rel="noopener">REPO<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="repo-link" href="https://mdify-app.vercel.app/" target="_blank" rel="noopener" data-goal="project-mdify-live">LIVE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="repo-link" href="https://github.com/DevBehindYou/MDify" target="_blank" rel="noopener">CODE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
 
       <article class="work-card">
-        <p class="w-head"><span>02</span><span class="amber">DART / FLUTTER</span></p>
-        <h3>Atomic-Notes</h3>
-        <p>A note app built around two things most note apps trade against each other: security and convenience. Local-first, with a deliberately small surface area.</p>
+        <p class="w-head"><span>05</span><span class="amber">FLUTTER &middot; DART</span></p>
+        <h3>Atomic Notes</h3>
+        <p>Local-first Android notes that sync one file per note to your own Google Drive, with an optional encrypted vault and biometric lock. 280 tests. Source-available.</p>
         <div class="w-foot">
-          <span class="tag">Flutter</span><span class="tag">Mobile</span>
-          <a class="repo-link" href="https://github.com/DevBehindYou/Atomic-Notes" target="_blank" rel="noopener">REPO<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-
-      <article class="work-card">
-        <p class="w-head"><span>03</span><span class="amber">WEB APP</span></p>
-        <h3>timoglobe</h3>
-        <p>World-time app showing the current time across countries at a glance. Small by design: one problem solved completely instead of five partially.</p>
-        <div class="w-foot">
-          <span class="tag">Time zones</span><span class="tag">Utility</span>
-          <a class="repo-link" href="https://github.com/DevBehindYou/timoglobe" target="_blank" rel="noopener">REPO<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </div>
-      </article>
-
-      <article class="work-card">
-        <p class="w-head"><span>04</span><span class="amber">DART / FIREBASE</span></p>
-        <h3>demo_apps_builds</h3>
-        <p>E-commerce app with Firebase integration. Auth, catalogue, cart and orders wired end to end as a reference build, not a screenshot demo.</p>
-        <div class="w-foot">
-          <span class="tag">Firebase</span><span class="tag">E-commerce</span>
-          <a class="repo-link" href="https://github.com/DevBehindYou/demo_apps_builds" target="_blank" rel="noopener">REPO<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <span class="tag">Flutter</span><span class="tag">Encryption</span>
+          <a class="repo-link" href="https://atomic-notes-community.vercel.app/" target="_blank" rel="noopener" data-goal="project-atomic-notes-live">LIVE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="repo-link" href="https://github.com/DevBehindYou/Atomic-Notes-App-V0.2" target="_blank" rel="noopener">CODE<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
     </div>
 
     <div class="work-nav" id="work-nav" hidden>
       <button class="icon-btn" type="button" id="work-prev" aria-label="Previous project"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
-      <span class="work-count" id="work-count">01 / 04</span>
+      <span class="work-count" id="work-count">01 / 05</span>
       <button class="icon-btn" type="button" id="work-next" aria-label="Next project"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
     </div>
   </div>
@@ -1199,7 +1235,7 @@
         </li>
         <li>
           <svg aria-hidden="true"><use href="#i-check"/></svg>
-          <span><b>DevBehindYou SEO advice comes from someone who ships the fix.</b> 12+ builds, including datastride.ai and two full-stack Next.js products with custom admin panels. The code is on the DevBehindYou GitHub.</span>
+          <span><b>DevBehindYou SEO advice comes from someone who ships the fix.</b> 12+ builds, including datastride.ai, the Raku-Chan fan site and NEXUS CRM. The project code is on the DevBehindYou GitHub.</span>
         </li>
         <li>
           <svg aria-hidden="true"><use href="#i-check"/></svg>
@@ -1263,17 +1299,17 @@
       </p>
     </div>
     <div class="handoff-links">
-      <a class="handoff-link" href="https://devbehindyou.vercel.app/case-studies" target="_blank" rel="noopener me" data-goal="portfolio-cases">
+      <a class="handoff-link" href="https://devbehindyou.com/case-studies" target="_blank" rel="noopener me" data-goal="portfolio-cases">
         <span class="hl-label">Case studies</span>
         <span class="hl-sub">Full write-ups</span>
         <svg aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
-      <a class="handoff-link" href="https://devbehindyou.vercel.app/results" target="_blank" rel="noopener me" data-goal="portfolio-results">
+      <a class="handoff-link" href="https://devbehindyou.com/results" target="_blank" rel="noopener me" data-goal="portfolio-results">
         <span class="hl-label">Results</span>
         <span class="hl-sub">Numbers, and their sources</span>
         <svg aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
-      <a class="handoff-link" href="https://devbehindyou.vercel.app/portfolio/products" target="_blank" rel="noopener me" data-goal="portfolio-products">
+      <a class="handoff-link" href="https://devbehindyou.com/portfolio/products" target="_blank" rel="noopener me" data-goal="portfolio-products">
         <span class="hl-label">Templates</span>
         <span class="hl-sub">14 sites and apps, source included</span>
         <svg aria-hidden="true"><use href="#i-arrow"/></svg>
@@ -1305,7 +1341,7 @@
       <details class="faq-item" name="faq">
         <summary>What kind of web development do you take on?<span class="faq-sign" aria-hidden="true"></span></summary>
         <div class="faq-answer">
-          <p>Full-stack web apps and marketing sites. React and Next.js with Node.js behind them, MongoDB, Supabase or Firebase for data, Flutter for apps, WordPress when a client’s team maintains the site. Most common jobs: a marketing site that has to rank, an internal CRM or dashboard, and migrations off legacy WordPress. Recent work: datastride.ai, plus two full-stack Next.js products with custom admin panels.</p>
+          <p>Full-stack web apps and marketing sites. React and Next.js with Node.js behind them, MongoDB, Supabase or Firebase for data, Flutter for apps, WordPress when a client’s team maintains the site. Most common jobs: a marketing site that has to rank, an internal CRM or dashboard, and migrations off legacy WordPress. Recent work: datastride.ai, the Raku-Chan fan site and NEXUS CRM, a multi-tenant CRM with an AI copilot.</p>
         </div>
       </details>
 
@@ -1376,7 +1412,7 @@
       <details class="faq-item" name="faq">
         <summary>Where can I find DevBehindYou online?<span class="faq-sign" aria-hidden="true"></span></summary>
         <div class="faq-answer">
-          <p>The DevBehindYou GitHub at github.com/DevBehindYou holds 25+ public repositories, including MDify, Atomic-Notes and timoglobe. The full DevBehindYou portfolio, with case studies and 14 templates, is at devbehindyou.vercel.app. Writing goes to Medium at @devbehindyou, and the same handle covers LinkedIn, X and YouTube.</p>
+          <p>The DevBehindYou GitHub at github.com/DevBehindYou holds 25+ public repositories, including MDify, EKIP, ITAP and Atomic Notes. The full DevBehindYou portfolio, with case studies and results, is at devbehindyou.com. Writing goes to Medium at @devbehindyou, and the same handle covers LinkedIn, X and YouTube.</p>
         </div>
       </details>
 
@@ -1398,7 +1434,7 @@
       <a class="btn btn-accent btn-lg" href="https://devbehindyou-app-github.netlify.app/" target="_blank" rel="noopener" data-goal="request-cta">
         Start a project request<svg aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
-      <a class="btn btn-ink" href="https://devbehindyou.vercel.app/" target="_blank" rel="noopener me" data-goal="portfolio-cta">
+      <a class="btn btn-ink" href="https://devbehindyou.com/" target="_blank" rel="noopener me" data-goal="portfolio-cta">
         See the full portfolio<svg aria-hidden="true"><use href="#i-arrow"/></svg>
       </a>
     </div>
@@ -1423,7 +1459,7 @@
       </a>
       <p class="footer-tag">DevBehindYou is Ashutosh Sharma. Developer by heart, SEO specialist by mind, analyst by habit.</p>
       <p class="footer-links">
-        <a href="https://devbehindyou.vercel.app/" target="_blank" rel="noopener me" data-goal="portfolio-footer">Full portfolio</a>
+        <a href="https://devbehindyou.com/" target="_blank" rel="noopener me" data-goal="portfolio-footer">Full portfolio</a>
         <a href="https://devbehindyou-app-github.netlify.app/" target="_blank" rel="noopener" data-goal="request-footer">Start a request</a>
       </p>
     </div>
@@ -1437,9 +1473,19 @@
       <li><a href="mailto:devbehindyou@gmail.com" aria-label="Email DevBehindYou"><svg aria-hidden="true"><use href="#i-mail"/></svg></a></li>
     </ul>
 
-    <p class="footer-legal">&copy; <span id="year">2026</span> Ashutosh Sharma. Hand-written HTML, CSS and JavaScript.</p>
+    <p class="footer-legal">&copy; <span id="year">2026</span> Ashutosh Sharma. Hand-written HTML, CSS and JavaScript. &middot; <a href="privacy.html">Privacy</a> &middot; <button type="button" data-consent-open>Cookie settings</button></p>
   </div>
 </footer>
+
+<!-- Analytics consent. Shown by assets/js/consent.js until the visitor chooses.
+     Hidden by default so the page reads cleanly with scripts off. -->
+<section class="consent" id="consent" role="region" aria-label="Analytics consent" hidden>
+  <p>May I count your visit with Google Analytics? It sets cookies, and only loads if you allow it. <a href="privacy.html">Privacy</a></p>
+  <div class="consent-actions">
+    <button type="button" data-consent="granted">Allow analytics</button>
+    <button type="button" data-consent="denied">No thanks</button>
+  </div>
+</section>
 
 <script type="module" src="assets/js/main.js"></script>
 </body>

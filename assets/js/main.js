@@ -220,7 +220,7 @@ if (slot) {
    The boot readout already exists as static HTML. Nothing here is required
    to read the page; this only adds the interaction on top.
    ========================================================================== */
-const PORTFOLIO = 'https://devbehindyou.vercel.app/';
+const PORTFOLIO = 'https://devbehindyou.com/';
 const REQUEST = 'https://devbehindyou-app-github.netlify.app/';
 
 const consoleEl = $('#console');
@@ -239,6 +239,7 @@ if (consoleEl) {
       '<li>Available commands:</li>',
       kv('whoami', 'who is behind this'),
       kv('builds', 'sites and apps shipped'),
+      kv('projects', 'the five flagship projects'),
       kv('skills', 'the working stack'),
       kv('proof', 'real client numbers'),
       kv('geo', 'what GEO actually means'),
@@ -251,7 +252,7 @@ if (consoleEl) {
     whoami: () => [
       '<li>Ashutosh Sharma. Also known as DevBehindYou.</li>',
       '<li>Developer first. SEO/GEO specialist second. Data analyst by habit.</li>',
-      '<li class="ln-hint">Web Developer and SEO Specialist at NinePages &middot; Growth Specialist at TheFirstRanker, part-time since Feb 2026 &middot; ran the Growth Team at Content Whale.</li>',
+      '<li class="ln-hint">Web Developer and SEO Specialist at NinePages &middot; Growth Specialist at TheFirstRanker, part-time since Feb 2026 &middot; ran the growth team at Content Whale.</li>',
       '<li class="ln-hint">Freelance: web development, app development, SEO/GEO strategy, brand building, AI-SEO content.</li>',
     ],
 
@@ -274,10 +275,19 @@ if (consoleEl) {
 
     builds: () => [
       kv('datastride.ai', 'Data and AI consultancy, site plus SEO/GEO strategy'),
-      kv('The Hope Tarot', 'Full-stack Next.js, chat widget and custom CRM'),
+      kv('NEXUS CRM', 'Own product: multi-tenant CRM with an AI copilot, live demo'),
       kv('Raku-Chan', 'Full-stack Next.js fan site with admin panel'),
       kv('templates', '14 site and app templates sold as source code'),
       `<li class="ln-hint">12+ DevBehindYou builds total. React, Next.js, Node, WordPress and Flutter, depending on what the project needed.</li>`,
+    ],
+
+    projects: () => [
+      kv('NEXUS CRM', 'Multi-tenant CRM with an AI copilot, live demo'),
+      kv('EKIP', 'Answers from company documents, with a citation on every answer'),
+      kv('ITAP', 'Hiring platform with explainable match scores'),
+      kv('MDify', 'Files to clean Markdown, open source'),
+      kv('Atomic Notes', 'Local-first Android notes with an encrypted vault'),
+      `<li class="ln-hint">Live demos and code links are in the Projects section below.</li>`,
     ],
 
     geo: () => [
@@ -295,8 +305,8 @@ if (consoleEl) {
     portfolio: () => ({
       open: PORTFOLIO,
       lines: [
-        '<li>Opening the full portfolio. Case studies, results, services, and 14 templates.</li>',
-        `<li class="ln-hint">If the tab did not open: ${link(PORTFOLIO, 'devbehindyou.vercel.app')}</li>`,
+        '<li>Opening the full portfolio. Case studies, results and services.</li>',
+        `<li class="ln-hint">If the tab did not open: ${link(PORTFOLIO, 'devbehindyou.com')}</li>`,
       ],
     }),
 
@@ -314,7 +324,7 @@ if (consoleEl) {
     stack: 'skills', tech: 'skills', ls: 'help', '?': 'help', man: 'help',
     about: 'whoami', me: 'whoami', bio: 'whoami',
     work: 'portfolio', site: 'portfolio', open: 'portfolio',
-    projects: 'builds', sites: 'builds', apps: 'builds', dev: 'builds',
+    sites: 'builds', apps: 'builds', dev: 'builds',
     request: 'hire', quote: 'hire', contactform: 'hire',
     results: 'proof', stats: 'proof', cases: 'proof',
     email: 'contact', mail: 'contact',

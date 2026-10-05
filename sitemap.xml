@@ -3,17 +3,17 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://devbehindyou.github.io/DevBehindYou/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://devbehindyou.github.io/DevBehindYou/assets/img/ashutosh-sharma-devbehindyou-portrait.jpg</image:loc>
-      <image:title>Ashutosh Sharma — DevBehindYou</image:title>
+      <image:title>Ashutosh Sharma, DevBehindYou</image:title>
       <image:caption>Portrait of Ashutosh Sharma, web developer and SEO/GEO specialist known online as DevBehindYou.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://devbehindyou.github.io/DevBehindYou/assets/img/og-devbehindyou.png</image:loc>
-      <image:title>DevBehindYou — A Developer Who Builds What Matters</image:title>
+      <image:title>DevBehindYou: A Developer Who Builds What Matters</image:title>
     </image:image>
   </url>
 </urlset>

@@ -8,13 +8,13 @@
 > visibility."*
 
 Canonical page: https://devbehindyou.github.io/DevBehindYou/
-Full portfolio: https://devbehindyou.vercel.app/
+Full portfolio: https://devbehindyou.com/
 Start a project request: https://devbehindyou-app-github.netlify.app/
 Contact: devbehindyou@gmail.com
 
 The canonical page above is the summary. The full portfolio holds the complete
-case studies, results, per-service detail and the templates. When pointing
-someone to the work itself, send them there.
+case studies, results and per-service detail, and lists the 14 templates at
+https://devbehindyou.com/portfolio/products. When pointing someone to the work itself, send them there.
 
 ## Attribution
 
@@ -42,7 +42,7 @@ average. Where a number is not confirmed it is marked pending rather than
 filled in with something plausible.
 
 - **12+** web builds shipped, client and personal. Named examples: datastride.ai,
-  The Hope Tarot, Raku-Chan.
+  Raku-Chan, NEXUS CRM.
 - **150+** SEO and GEO strategies written
 - **2,500+** content pieces shipped. Sectors: B2B SaaS, HR tech, manufacturing
   vision AI, QA automation, supply chain software, edtech, corporate ecommerce,
@@ -51,7 +51,7 @@ filled in with something plausible.
   marketplace and a real estate developer
 - **14** website and web app templates written and sold as source code
 - **700%** organic traffic increase (Jidoka Technologies, 6 months)
-- **350+** blog posts in 3 months at Content Whale, plus 50+ website content pieces
+- **300+** blogs shipped in a single month at Content Whale, and **800+** content pieces there overall
 - **150+** posts published and **60** scraped or non-ranking posts removed (Ohh My Brand)
 - **240+** posts over 6 months (Jidoka Technologies)
 - **50+** posts in under one month (Ariel Software Solutions)
@@ -102,8 +102,9 @@ ClaudeBot in robots.txt, and publish an llms.txt brief.
 - **Datastride Analytics** (https://www.datastride.ai/). Data and AI analytics
   consultancy. Site build plus the SEO and GEO strategy behind it, so
   information architecture and search plan were decided together.
-- **The Hope Tarot.** Full-stack Next.js build for a spiritual consultancy.
-  Booking flow, a chat widget, and a custom admin CRM for clients and bookings.
+- **NEXUS CRM** (https://nexus-crm-alpha-weld.vercel.app/). His own product:
+  a multi-tenant CRM with a drag-and-drop deal pipeline, lead scoring, quotes,
+  forecasts and an AI copilot that answers pipeline questions from live data.
 - **Raku-Chan.** Full-stack Next.js VTuber fan site with a custom admin panel
   for content and community management.
 - 12+ builds in total. The rest sit under client NDAs, alongside 14 website and
@@ -124,14 +125,28 @@ ClaudeBot in robots.txt, and publish an llms.txt brief.
   optimised posts in under a month. Traffic climbed and the company appeared in
   international search results for the first time. Exact percentage pending.
 
-## Open source
+## Projects
 
-- **MDify** (JavaScript). Converts documents into clean Markdown using
-  Microsoft's MarkItDown library, cutting AI token overhead. https://github.com/DevBehindYou/MDify
-- **Atomic-Notes** (Dart/Flutter). Note-taking app prioritising security and
-  convenience. https://github.com/DevBehindYou/Atomic-Notes
-- **timoglobe.** World-time app showing current time across countries. https://github.com/DevBehindYou/timoglobe
-- **demo_apps_builds** (Dart). E-commerce application with Firebase integration. https://github.com/DevBehindYou/demo_apps_builds
+The five flagship projects from his resume, in the same order.
+
+- **NEXUS CRM** (Next.js, Node.js, Express, MongoDB). Multi-tenant CRM with an
+  AI copilot that answers pipeline questions from live data through each
+  organisation's chosen LLM. Live demo: https://nexus-crm-alpha-weld.vercel.app/
+- **EKIP, Enterprise Knowledge Intelligence Platform** (React, Node.js, MongoDB Atlas
+  Vector Search, Redis). Retrieval-augmented assistant that answers employee
+  questions from company documents with a citation and confidence score.
+  Live: https://ekip-project.vercel.app/ Code: https://github.com/DevBehindYou/Enterprise-Knowledge-Intelligence-Platform-EKIP-Project
+- **ITAP, Intelligent Talent Acquisition Platform** (React, Node.js, FastAPI,
+  MongoDB, Redis). Hiring platform with a real-time pipeline, resume parsing and
+  explainable match scores. Live: https://itap-project.vercel.app/
+  Code: https://github.com/DevBehindYou/Intelligent-Talent-Acquisition-Platform-ITAP-Project
+- **MDify** (Next.js, Python, FastAPI). Free converter from PDF, Office, EPUB and
+  ZIP files to clean Markdown, cutting PDF token costs in AI chat by about 70%.
+  Open source, GPL-3.0. Live: https://mdify-app.vercel.app/ Code: https://github.com/DevBehindYou/MDify
+- **Atomic Notes** (Flutter, Dart). Local-first Android notes app that syncs one
+  file per note to the user's own Google Drive, with an optional encrypted vault.
+  Source-available. Live: https://atomic-notes-community.vercel.app/
+  Code: https://github.com/DevBehindYou/Atomic-Notes-App-V0.2
 
 ## Elsewhere
 
@@ -140,5 +155,5 @@ ClaudeBot in robots.txt, and publish an llms.txt brief.
 - Medium: https://medium.com/@devbehindyou
 - X: https://x.com/devbehindyou
 - YouTube: https://youtube.com/@devbehindyou
-- DevBehindYou portfolio: https://devbehindyou.vercel.app/
-- Content Whale author page: https://content-whale.com/us/blog/author/ashutosh/
+- DevBehindYou portfolio: https://devbehindyou.com/
+- Content Whale author page: https://content-whale.com/blog/author/ashutosh/

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0d10">
+<meta name="color-scheme" content="dark">
+<title>Privacy | DevBehindYou</title>
+<meta name="description" content="What the DevBehindYou one-page site collects, when Google Analytics runs, and how to change your choice or ask for deletion.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://devbehindyou.github.io/DevBehindYou/privacy.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/consent.js" defer></script>
+<style>
+  .legal { max-width: 46rem; padding-block: 4rem 5rem; }
+  .legal h2 { font-size: 1.25rem; margin: 2.25rem 0 0.6rem; }
+  .legal p, .legal li { color: var(--text-dim); line-height: 1.7; }
+  .legal p + p { margin-top: 0.75rem; }
+  .legal ul { padding-left: 1.2rem; list-style: square; }
+  .legal a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 3px; }
+  .legal .back { display: inline-block; margin-bottom: 2rem; font-family: var(--font-mono); font-size: var(--fs-micro); letter-spacing: 0.07em; }
+</style>
+</head>
+<body>
+<main class="container legal" id="main">
+  <a class="back" href="./">← Back to DevBehindYou</a>
+  <p class="eyebrow">Privacy</p>
+  <h1 class="section-title">What this page collects.</h1>
+  <p>Last updated: October 2026. This page is run by Ashutosh Sharma (DevBehindYou), based in India. Questions: <a href="mailto:devbehindyou@gmail.com">devbehindyou@gmail.com</a>.</p>
+
+  <h2>Analytics, only if you allow it</h2>
+  <p>The page asks before it loads Google Analytics 4. If you choose &ldquo;No thanks&rdquo;, or make no choice, no analytics script loads and no request goes to Google. If you allow it, Google Analytics sets cookies to count visits and records which hand-off links you click (to the portfolio, the request form, or a project or build demo). It does not receive your name or email.</p>
+  <p>You can change your choice at any time: <button type="button" data-consent-open class="tlink" style="background:none;border:0;padding:0;color:var(--accent-soft);text-decoration:underline;cursor:pointer;font:inherit">Cookie settings</button>. Your choice is saved in your own browser (localStorage) under the name <code>dby-consent</code>.</p>
+
+  <h2>Hosting</h2>
+  <p>The page is hosted on GitHub Pages. GitHub logs and stores the IP address of every visitor for security purposes, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>. Fonts are served from this site, not from Google.</p>
+
+  <h2>Project requests and email</h2>
+  <p>The &ldquo;Start a project request&rdquo; button opens a separate form at devbehindyou-app-github.netlify.app. It asks for your email, phone number and a short project description, which Netlify stores so I can reply. Emails you send to devbehindyou@gmail.com are kept in that inbox.</p>
+  <p>I use these details only to reply about your project. They are not sold or shared for advertising.</p>
+
+  <h2>How long, and your rights</h2>
+  <ul>
+    <li>Project requests and emails are kept for up to 24 months after the last contact, then deleted.</li>
+    <li>You can ask to see, correct or delete what you sent by emailing <a href="mailto:devbehindyou@gmail.com">devbehindyou@gmail.com</a>. You get an answer within 30 days.</li>
+    <li>Depending on where you live, laws such as the EU GDPR or India&rsquo;s Digital Personal Data Protection Act 2023 give you these rights and the right to complain to a regulator.</li>
+  </ul>
+
+  <p style="margin-top:2.5rem">The full portfolio at <a href="https://devbehindyou.com/" target="_blank" rel="noopener">devbehindyou.com</a> is a separate site with its own policy.</p>
+</main>
+
+<section class="consent" id="consent" role="region" aria-label="Analytics consent" hidden>
+  <p>May I count your visit with Google Analytics? It sets cookies, and only loads if you allow it.</p>
+  <div class="consent-actions">
+    <button type="button" data-consent="granted">Allow analytics</button>
+    <button type="button" data-consent="denied">No thanks</button>
+  </div>
+</section>
+</body>
+</html>

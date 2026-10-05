@@ -13,6 +13,19 @@
 /* ==========================================================================
    1. TOKENS
    ========================================================================== */
+/* ==========================================================================
+   0. FONTS (self-hosted, latin subset, OFL 1.1, see assets/fonts/LICENSE.md)
+   Replaces the Google Fonts stylesheet: no third-party request before consent
+   and no render-blocking cross-origin CSS.
+   ========================================================================== */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/inter-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/space-grotesk-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); }
+
 :root {
   /* --- Surfaces (dark canvas = "the frame being analyzed") --- */
   --bg: #0c0d10;
@@ -1863,3 +1876,58 @@ p { text-wrap: pretty; }
   .faq-answer { display: block !important; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.75em; }
 }
+
+/* ==========================================================================
+   22. PROJECT LINKS, CONSOLE LOG WRAPPER, CONSENT BANNER (4 Oct 2026)
+   ========================================================================== */
+.repo-link + .repo-link { margin-left: 0.9rem; }
+
+/* role="log" lives on this wrapper: ARIA does not allow it on <ol>. */
+.console-log { display: block; }
+
+.consent {
+  position: fixed;
+  inset: auto 1rem 1rem 1rem;
+  z-index: 60;
+  max-width: 34rem;
+  margin-left: auto;
+  padding: 1rem 1.1rem;
+  background: var(--bg-inset);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  font-size: 0.875rem;
+  color: var(--text-dim);
+}
+.consent[hidden] { display: none; }
+.consent p { margin: 0 0 0.75rem; }
+.consent a { color: var(--accent-soft); text-decoration: underline; text-underline-offset: 3px; }
+.consent-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.consent-actions button {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.consent-actions button[data-consent="granted"] { background: var(--accent-soft); border-color: var(--accent-soft); color: var(--bg); }
+.consent-actions button:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 2px; }
+.footer-legal button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.footer-legal a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
