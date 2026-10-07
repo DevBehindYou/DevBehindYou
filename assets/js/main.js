@@ -188,7 +188,7 @@ if (fine && !reduced) {
    -------------------------------------------------------------------------- */
 const slot = $('#scan-slot');
 if (slot) {
-  const words = ['WEB BUILDS', 'APP BUILDS', 'SEO AUDITS', 'GEO STRATEGY', 'AI-SEO CONTENT'];
+  const words = ['WEB APPS', 'ANDROID APPS', 'UI LIBRARIES', 'DEV TOOLS', 'ATOMIC NOTES V0.3'];
   const spans = words.map((w, i) => {
     const s = document.createElement('span');
     s.textContent = w;
@@ -221,7 +221,8 @@ if (slot) {
    to read the page; this only adds the interaction on top.
    ========================================================================== */
 const PORTFOLIO = 'https://devbehindyou.com/';
-const REQUEST = 'https://devbehindyou-app-github.netlify.app/';
+const GITHUB = 'https://github.com/DevBehindYou';
+const CONTACT = 'https://devbehindyou.com/contact';
 
 const consoleEl = $('#console');
 if (consoleEl) {
@@ -238,83 +239,72 @@ if (consoleEl) {
     help: () => [
       '<li>Available commands:</li>',
       kv('whoami', 'who is behind this'),
-      kv('builds', 'sites and apps shipped'),
-      kv('projects', 'the five flagship projects'),
+      kv('projects', 'what I am building, with progress'),
+      kv('now', 'what I am working on this week'),
       kv('skills', 'the working stack'),
-      kv('proof', 'real client numbers'),
-      kv('geo', 'what GEO actually means'),
-      kv('portfolio', 'open the full site'),
-      kv('hire', 'start a project request'),
+      kv('github', 'open my GitHub profile'),
+      kv('portfolio', 'open devbehindyou.com'),
+      kv('hire', 'contact me about a project'),
       kv('contact', 'email address'),
       kv('clear', 'wipe the console'),
     ],
 
     whoami: () => [
       '<li>Ashutosh Sharma. Also known as DevBehindYou.</li>',
-      '<li>Developer first. SEO/GEO specialist second. Data analyst by habit.</li>',
-      '<li class="ln-hint">Web Developer and SEO Specialist at NinePages &middot; Growth Specialist at TheFirstRanker, part-time since Feb 2026 &middot; ran the growth team at Content Whale.</li>',
-      '<li class="ln-hint">Freelance: web development, app development, SEO/GEO strategy, brand building, AI-SEO content.</li>',
+      '<li>Full-stack web and Android developer. 41 public repos, building in public.</li>',
+      '<li class="ln-hint">Web Developer and SEO Specialist at NinePages &middot; part-time Growth Specialist at TheFirstRanker &middot; freelance web and app builds.</li>',
     ],
 
     skills: () => [
-      kv('build', 'React &middot; Next.js &middot; Node.js &middot; Mongo/Supabase/Firebase'),
-      kv('seo/geo', 'Screaming Frog &middot; SEMrush &middot; Ahrefs &middot; schema &middot; pSEO'),
-      kv('data', 'GA4 &middot; Search Console &middot; Python &middot; BigQuery'),
-      kv('reporting', 'Tableau &middot; Power BI'),
-      `<li class="ln-hint">Breakdown per discipline: ${link(PORTFOLIO + 'what-i-do/seo-geo', 'what-i-do')}</li>`,
-    ],
-
-    proof: () => [
-      kv('web builds', '12+ shipped, client and personal'),
-      kv('best lift', '700% organic traffic, Jidoka, 6 months'),
-      kv('content shipped', '2,500+ pieces'),
-      kv('strategies', '150+ SEO and GEO'),
-      kv('wireframes', '250+ delivered'),
-      `<li class="ln-hint">Every figure traces to a deliverable or a GA4 property. Full write-ups: ${link(PORTFOLIO + 'case-studies', 'case studies')}</li>`,
-    ],
-
-    builds: () => [
-      kv('datastride.ai', 'Data and AI consultancy, site plus SEO/GEO strategy'),
-      kv('NEXUS CRM', 'Own product: multi-tenant CRM with an AI copilot, live demo'),
-      kv('Raku-Chan', 'Full-stack Next.js fan site with admin panel'),
-      kv('templates', '14 site and app templates sold as source code'),
-      `<li class="ln-hint">12+ DevBehindYou builds total. React, Next.js, Node, WordPress and Flutter, depending on what the project needed.</li>`,
+      kv('web', 'React &middot; Next.js &middot; Node.js &middot; FastAPI &middot; TypeScript'),
+      kv('mobile', 'Flutter &middot; Dart &middot; Kotlin &middot; Jetpack Compose'),
+      kv('data', 'MongoDB &middot; Supabase &middot; Redis &middot; BullMQ &middot; RAG'),
+      kv('ship', 'GitHub Actions &middot; Docker &middot; Vercel &middot; Render'),
     ],
 
     projects: () => [
-      kv('NEXUS CRM', 'Multi-tenant CRM with an AI copilot, live demo'),
-      kv('EKIP', 'Answers from company documents, with a citation on every answer'),
-      kv('ITAP', 'Hiring platform with explainable match scores'),
-      kv('MDify', 'Files to clean Markdown, open source'),
-      kv('Atomic Notes', 'Local-first Android notes with an encrypted vault'),
-      `<li class="ln-hint">Live demos and code links are in the Projects section below.</li>`,
+      kv('Atomic Notes', 'Shipped v2.03.5 &middot; roadmap 7 of 11 done'),
+      kv('Atomic Notes v0.3', 'In development &middot; 318 commits across 3 repos'),
+      kv('Atomic Assist', 'In development &middot; phases 1&ndash;5 built'),
+      kv('MDify', 'Live &middot; 248 tests &middot; GPL-3.0'),
+      kv('EKIP &middot; ITAP', 'Live demos &middot; MIT'),
+      kv('NEXUS CRM', 'Live demo &middot; private code'),
+      '<li class="ln-hint">Progress cards with code and live links are in the <a href="#projects">Projects</a> section below.</li>',
     ],
 
-    geo: () => [
-      '<li>GEO = Generative Engine Optimization.</li>',
-      '<li>Getting your brand surfaced and cited inside AI answers on ChatGPT, Perplexity and Google AI Overviews, not only in blue links.</li>',
-      '<li class="ln-hint">Answer engines pull from structured, verifiable, entity-rich content. So the work is schema, entity signals, direct answer formatting and crawler config.</li>',
+    now: () => [
+      '<li>This week: the Atomic Notes v0.3 rebuild (app, sync server and site) and Atomic Assist.</li>',
+      '<li class="ln-hint">Live progress in the <a href="#projects">Projects</a> section.</li>',
     ],
+
+    github: () => ({
+      open: GITHUB,
+      lines: [
+        '<li>Opening github.com/DevBehindYou.</li>',
+        `<li class="ln-hint">If the tab did not open: ${link(GITHUB, 'github.com/DevBehindYou')}</li>`,
+      ],
+    }),
 
     contact: () => [
+      kv('form', `<a href="${CONTACT}" target="_blank" rel="noopener">devbehindyou.com/contact</a>`),
       kv('email', '<a href="mailto:devbehindyou@gmail.com">devbehindyou@gmail.com</a>'),
       kv('reply time', '1 business day'),
-      `<li class="ln-hint">Faster route: type <code>hire</code> for the request form.</li>`,
+      `<li class="ln-hint">Faster route: type <code>hire</code> to open the contact form.</li>`,
     ],
 
     portfolio: () => ({
       open: PORTFOLIO,
       lines: [
-        '<li>Opening the full portfolio. Case studies, results and services.</li>',
+        '<li>Opening devbehindyou.com: client work, case studies and services.</li>',
         `<li class="ln-hint">If the tab did not open: ${link(PORTFOLIO, 'devbehindyou.com')}</li>`,
       ],
     }),
 
     hire: () => ({
-      open: REQUEST,
+      open: CONTACT,
       lines: [
-        '<li>Opening the project request form. Three fields: email, phone, and what you are building.</li>',
-        `<li class="ln-hint">If the tab did not open: ${link(REQUEST, 'start a request')}</li>`,
+        '<li>Opening the contact page on devbehindyou.com. You get a reply within one business day.</li>',
+        `<li class="ln-hint">If the tab did not open: ${link(CONTACT, 'devbehindyou.com/contact')}</li>`,
       ],
     }),
   };
@@ -324,9 +314,9 @@ if (consoleEl) {
     stack: 'skills', tech: 'skills', ls: 'help', '?': 'help', man: 'help',
     about: 'whoami', me: 'whoami', bio: 'whoami',
     work: 'portfolio', site: 'portfolio', open: 'portfolio',
-    sites: 'builds', apps: 'builds', dev: 'builds',
+    sites: 'projects', apps: 'projects', dev: 'projects', builds: 'projects', repos: 'github', code: 'github', gh: 'github', status: 'now', progress: 'projects',
     request: 'hire', quote: 'hire', contactform: 'hire',
-    results: 'proof', stats: 'proof', cases: 'proof',
+    results: 'portfolio', cases: 'portfolio',
     email: 'contact', mail: 'contact',
   };
   const NAMES = Object.keys(COMMANDS);
